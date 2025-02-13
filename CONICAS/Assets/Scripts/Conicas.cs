@@ -62,7 +62,7 @@ public class Conicas : MonoBehaviour
                     lbl_t.gameObject.SetActive(false);
                     sl_t.gameObject.SetActive(false);
 
-                    posPuntos = CreaRecta(a, b, h * -1, k, resolucion);
+                    posPuntos = CreaRecta(a, b, h, k, resolucion);
                     break;
                 case 2: //Circunferencia
                     txtConicas.text = "Circunferencia";
@@ -70,16 +70,18 @@ public class Conicas : MonoBehaviour
                     ResetControles();
 
                     //cambia texto en las etiquetas
-                    lbl_a.text = "ax";
-                    lbl_b.text = "ay";
-                    lbl_h.text = "bx";
-                    lbl_k.text = "by";
+                    lbl_b.text = "r";
+                    lbl_h.text = "h";
+                    lbl_k.text = "k";
 
                     //oculta slider y etiqueta
+                    lbl_a.gameObject.SetActive(false);
+                    sl_a.gameObject.SetActive(false);
+
                     lbl_t.gameObject.SetActive(false);
                     sl_t.gameObject.SetActive(false);
 
-                    posPuntos = CreaCircunferencia();
+                    posPuntos = CreaCircunferencia(b, h, k, resolucion);
 
 
                     break;
@@ -130,6 +132,7 @@ public class Conicas : MonoBehaviour
         lbl_t.text = "t";
     }
 
+    //**************    RECTA   *************************
     public void BtnRecta()
     {
         conicaSeleccioanda = 1;
@@ -150,10 +153,25 @@ public class Conicas : MonoBehaviour
 
     }
 
+    //**********************    CIRCUNFERENCIA **********************
     public void BtnCircunferencia()
     {
         conicaSeleccioanda = 2;
         DibujaConicas();
+    }
+
+      private Vector3[] CreaCircunferencia(float r, float h, float k, int resolucion)
+    {
+        posPuntos = new Vector3[resolucion + 1];
+        Vector3 centro = new Vector3(h,k,0); 
+        
+        for(int i = 0; i<= resolucion; i++){
+            float angulo = (float)i / (float)resolucion * 2.0f * Mathf.PI;
+            posPuntos[i] = new Vector3(r * Mathf.Cos(angulo), r * Mathf.Sin(angulo), 0);
+            posPuntos[i] = posPuntos[i] + centro;
+        }
+        return posPuntos;
+
     }
     public void BtnElipse()
     {
