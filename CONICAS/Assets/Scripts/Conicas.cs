@@ -111,6 +111,8 @@ public class Conicas : MonoBehaviour
                     txtConicas.text = "Hiperbola";
                     lr.material = matHiperbola;
                     ResetControles();
+
+                    posPuntos = CreaHiperbola(a * mlt, b * mlt, h, k, t * 360, resolucion);
                     break;
             }
 
@@ -238,5 +240,20 @@ public class Conicas : MonoBehaviour
     {
         conicaSeleccioanda = 5;
         DibujaConicas();
+    }
+    private Vector3[] CreaHiperbola(float a, float b, float h, float k, float theta, int resolucion)
+    {
+        posPuntos = new Vector3[resolucion + 1];
+        Quaternion q = Quaternion.AngleAxis(theta, Vector3.forward);
+        Vector3 centro = new Vector3(h, k, 0);
+
+        for (int i = 0; i <= resolucion; i++)
+        {
+            float angulo = (float)i / (float)resolucion * 2.0f * Mathf.PI;
+            posPuntos[i] = new Vector3(a / Mathf.Cos(angulo), b * Mathf.Tan(angulo), 0);
+            posPuntos[i] = q * posPuntos[i] + centro;
+        }
+        return posPuntos;
+
     }
 }
