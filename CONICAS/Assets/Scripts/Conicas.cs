@@ -12,19 +12,19 @@ public class Conicas : MonoBehaviour
     private float mlt = 7; 
 
     public Slider sl_a;
-    private float a = 5;
+    private float a = 0;
 
     public Slider sl_b;
-    private float b = 3;
+    private float b = 0;
 
     public Slider sl_h;
-    private float h = 1;
+    private float h = 0;
 
     public Slider sl_k;
-    private float k = 1;
+    private float k = 0;
 
     public Slider sl_t;
-    private float t = 45;
+    private float t = 0;
 
     private int resolucion = 1000;
 
@@ -32,7 +32,16 @@ public class Conicas : MonoBehaviour
     public Material matRecta, matCircunferencia, matElipse, matParabola, matHiperbola;
 
     private Vector3[] posPuntos;
-    
+
+    private void Start()
+    {
+        sl_a.enabled = false;
+        sl_b.enabled = false;
+        sl_h.enabled = false;
+        sl_k.enabled = false;
+        sl_t.enabled = false;
+    }
+
 
     public void DibujaConicas()
     {
@@ -53,6 +62,9 @@ public class Conicas : MonoBehaviour
                     txtConicas.text = "Recta";
                     lr.material = matRecta;
                     ResetControles();
+
+                    //valores por defecto
+                    
 
                     //cambia texto en las etiquetas
                     lbl_a.text = "ax";
@@ -90,7 +102,7 @@ public class Conicas : MonoBehaviour
                     lr.material = matElipse;
                     ResetControles();
 
-                    posPuntos = CreaElipse(a*mlt, b*mlt, h, k, t*360, resolucion);
+                    posPuntos = CreaElipse(a*mlt, b*mlt, h, k, t, resolucion);
 
                     break;
                 case 4: //Parabola
@@ -105,14 +117,14 @@ public class Conicas : MonoBehaviour
                     lbl_a.gameObject.SetActive(false);
                     sl_a.gameObject.SetActive(false);
 
-                    posPuntos = CreaParabola(b*mlt, h, k, t*360, resolucion);
+                    posPuntos = CreaParabola(b*mlt, h, k, t, resolucion);
                     break;
                 case 5: //Hiperbola
                     txtConicas.text = "Hiperbola";
                     lr.material = matHiperbola;
                     ResetControles();
 
-                    posPuntos = CreaHiperbola(a * mlt, b * mlt, h, k, t * 360, resolucion);
+                    posPuntos = CreaHiperbola(a * mlt, b * mlt, h, k, t, resolucion);
                     break;
             }
 
@@ -144,6 +156,12 @@ public class Conicas : MonoBehaviour
         lbl_h.text = "h";
         lbl_k.text = "k";
         lbl_t.text = "t";
+
+        sl_a.enabled = true;
+        sl_b.enabled = true;
+        sl_h.enabled = true;
+        sl_k.enabled = true;
+        sl_t.enabled = true;
     }
 
     //**************    RECTA    *************************
