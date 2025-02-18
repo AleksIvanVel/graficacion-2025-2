@@ -168,6 +168,13 @@ public class Conicas : MonoBehaviour
     public void BtnRecta()
     {
         conicaSeleccioanda = 1;
+
+        //Establece valores a los sliders
+        sl_a.value = 1;
+        sl_b.value = 0;
+        sl_h.value = -1;
+        sl_k.value = 0;
+
         DibujaConicas();
     }
 
@@ -189,6 +196,13 @@ public class Conicas : MonoBehaviour
     public void BtnCircunferencia()
     {
         conicaSeleccioanda = 2;
+        
+        //Establece valores a los sliders
+        sl_a.value = 0;
+        sl_b.value = 0.5f;
+        sl_h.value = 0;
+        sl_k.value = 0.5f;
+        
         DibujaConicas();
     }
 
@@ -210,6 +224,13 @@ public class Conicas : MonoBehaviour
     public void BtnElipse()
     {
         conicaSeleccioanda = 3;
+
+        sl_a.value = 0.5f;
+        sl_b.value = 0.2f;
+        sl_h.value = 0;
+        sl_k.value = 0;
+        sl_t.value = 45;
+
         DibujaConicas();
     }
 
@@ -233,6 +254,13 @@ public class Conicas : MonoBehaviour
     public void BtnParabola()
     {
         conicaSeleccioanda = 4;
+
+        sl_a.value = 0;
+        sl_b.value = 0.25f;
+        sl_h.value = 0;
+        sl_k.value = 0;
+        sl_t.value = 0;
+
         DibujaConicas();
     }
 
@@ -257,6 +285,13 @@ public class Conicas : MonoBehaviour
     public void BtnHiperbola()
     {
         conicaSeleccioanda = 5;
+
+        sl_a.value = 0.15f;
+        sl_b.value = -0.15f;
+        sl_h.value = 0;
+        sl_k.value = 0;
+        sl_t.value = 45;
+
         DibujaConicas();
     }
     private Vector3[] CreaHiperbola(float a, float b, float h, float k, float theta, int resolucion)
