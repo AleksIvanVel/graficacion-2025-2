@@ -206,7 +206,7 @@ public class Conicas : MonoBehaviour
         DibujaConicas();
     }
 
-      private Vector3[] CreaCircunferencia(float r, float h, float k, int resolucion)
+    private Vector3[] CreaCircunferencia(float r, float h, float k, int resolucion)
     {
         posPuntos = new Vector3[resolucion + 1];
         Vector3 centro = new Vector3(h,k,0); 
@@ -217,7 +217,6 @@ public class Conicas : MonoBehaviour
             posPuntos[i] = posPuntos[i] + centro;
         }
         return posPuntos;
-
     }
 
     //**********************    ELIPSE    **********************
@@ -247,7 +246,6 @@ public class Conicas : MonoBehaviour
             posPuntos[i] = q * posPuntos[i] + centro;
         }
         return posPuntos;
-
     }
 
     //**********************    PARABOLA    **********************
