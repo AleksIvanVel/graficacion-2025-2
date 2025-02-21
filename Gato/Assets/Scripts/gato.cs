@@ -18,7 +18,7 @@ public class gato : MonoBehaviour
     void Start(){
         IniciaGato();
         txtJuego.text = "juego nuevo, miau";
-    }xdww
+    }
     public void AsignaTurno(Button btn){
         if (ObtenValoresMatrizGato(btn.name) == 0 && ganador == 0){
             turnoviejo=0;
