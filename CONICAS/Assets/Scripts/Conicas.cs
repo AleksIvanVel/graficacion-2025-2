@@ -63,9 +63,6 @@ public class Conicas : MonoBehaviour
                     lr.material = matRecta;
                     ResetControles();
 
-                    //valores por defecto
-                    
-
                     //cambia texto en las etiquetas
                     lbl_a.text = "ax";
                     lbl_b.text = "ay";
@@ -78,6 +75,7 @@ public class Conicas : MonoBehaviour
 
                     posPuntos = CreaRecta(a*3, b, h*3, k, resolucion);
                     break;
+
                 case 2: //Circunferencia
                     txtConicas.text = "Circunferencia";
                     lr.material = matCircunferencia;
