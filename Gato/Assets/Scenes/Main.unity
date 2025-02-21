@@ -412,6 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492464836}
   - component: {fileID: 492464835}
+  - component: {fileID: 492464837}
   m_Layer: 0
   m_Name: GATO
   m_TagString: Untagged
@@ -433,6 +434,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn: {fileID: 1230521912}
   txtJuego: {fileID: 1390710308}
+  reproductor: {fileID: 492464837}
+  gato1: {fileID: 8300000, guid: 5eb09fca916934b43adc58a33b7a3b30, type: 3}
+  gato2: {fileID: 8300000, guid: 05a534bd96e212648bac3c02c7d13f08, type: 3}
+  gato3: {fileID: 8300000, guid: c90ea2f3ba0441640a1c544bd84bdead, type: 3}
 --- !u!4 &492464836
 Transform:
   m_ObjectHideFlags: 0
@@ -449,6 +454,102 @@ Transform:
   - {fileID: 345150862}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &492464837
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492464834}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &510987296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1233,7 @@ GameObject:
   - component: {fileID: 899734950}
   - component: {fileID: 899734949}
   m_Layer: 5
-  m_Name: btnReiniciar (1)
+  m_Name: volver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1202,6 +1303,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 492464835}
+        m_TargetAssemblyTypeName: gato, Assembly-CSharp
+        m_MethodName: hacermiau
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 492464835}
         m_TargetAssemblyTypeName: gato, Assembly-CSharp
         m_MethodName: VolverInico
@@ -2194,7 +2307,7 @@ GameObject:
   - component: {fileID: 1415563993}
   - component: {fileID: 1415563992}
   m_Layer: 5
-  m_Name: btnReiniciar (2)
+  m_Name: reinciar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2264,6 +2377,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 492464835}
+        m_TargetAssemblyTypeName: gato, Assembly-CSharp
+        m_MethodName: hacermiau
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 492464835}
         m_TargetAssemblyTypeName: gato, Assembly-CSharp
         m_MethodName: ReiniciaJuego

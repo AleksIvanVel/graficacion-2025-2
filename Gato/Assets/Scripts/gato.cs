@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class gato : MonoBehaviour
 {
+
     public Button btn;
     public Text txtJuego;
 
+    private int huboganador=0;
     private int[,] matrizGato = new int[3,3];
     private int turno = 0; //En 0 nadie ha iniciado
     private int ganador = 0, movimientos = 0; //empate
     private int turnoviejo=0;
+    public AudioSource reproductor;
+    public AudioClip gato1, gato2, gato3;
 
     // Start is called before the first frame update
     void Start(){
@@ -24,10 +28,17 @@ public class gato : MonoBehaviour
             turnoviejo=0;
             turnoviejo= turno;
             if (turno == 0){
+                reproductor.clip = gato1;
+                reproductor.Play();
+
                 turno = 1;
             }else if( turno == 1){
+                reproductor.clip = gato2;
+                reproductor.Play();
                 turno = 2;
             }else {
+                reproductor.clip = gato1;
+                reproductor.Play();
                 turno = 1;
             }
             txtJuego.text = "juego en curso, miau";
@@ -81,6 +92,7 @@ public class gato : MonoBehaviour
         return a;
     }
     private void EscribeValorMatrizGato(string btn, int t){
+        
         switch (btn){
             case "G0":
                 matrizGato[0,0] = t;
@@ -168,15 +180,22 @@ public class gato : MonoBehaviour
         }
         if(ganador== 0 && movimientos==9){
             txtJuego.text= "empate";
+            huboganador=1;
         }
         if (ganador == 1){
             txtJuego.text= "gana: X";
+            huboganador=1; 
         }
         if (ganador == 2){
             txtJuego.text= "gana: O";
+            huboganador=1; 
+            
+        }
+        if (huboganador ==1){ 
+            reproductor.clip = gato3;
+            reproductor.Play();
         }
     }
-    
     
 
     private void IniciaGato(){
@@ -200,8 +219,11 @@ public class gato : MonoBehaviour
 
 
     }
+    
     public void ReiniciaJuego(){
+
         SceneManager.LoadScene("Main");
+        
     }
     public void VolverInico(){
         SceneManager.LoadScene("Inicio");
