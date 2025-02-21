@@ -18,13 +18,15 @@ public class gato : MonoBehaviour
     public AudioSource reproductor;
     public AudioClip gato1, gato2, gato3;
 
-    // Start is called before the first frame update
+    // Funcion para iniciar el juego 
     void Start(){
         IniciaGato();
         txtJuego.text = "juego nuevo, miau";
     }
     public void AsignaTurno(Button btn){
+        //si no hay algun ganador permite jugar
         if (ObtenValoresMatrizGato(btn.name) == 0 && ganador == 0){
+           // Cambia el turno 0: inicial, 1: t.1, 2: t.2
             turnoviejo=0;
             turnoviejo= turno;
             if (turno == 0){
@@ -41,12 +43,20 @@ public class gato : MonoBehaviour
                 reproductor.Play();
                 turno = 1;
             }
+            //cambia el texto
             txtJuego.text = "juego en curso, miau";
+
+            // dibuja el simbolo en la casilla 
             DibujaSimbolo(btn, turno);
+
+            // guarda el movimiento en la matriz
             EscribeValorMatrizGato(btn.name, turno);
+
+            // lleva el conteo de movimientos
             if(turnoviejo != turno){
                 movimientos++;
             }
+            
             VerificaGanador();
         }
     }
@@ -215,9 +225,6 @@ public class gato : MonoBehaviour
         GameObject.Find("G6").GetComponentInChildren<Text>().text = "";
         GameObject.Find("G7").GetComponentInChildren<Text>().text = "";
         GameObject.Find("G8").GetComponentInChildren<Text>().text = "";
-
-
-
     }
     
     public void ReiniciaJuego(){
