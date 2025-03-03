@@ -238,6 +238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c58f9f7ef67141d5b91249fc548c157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snd1: {fileID: 8300000, guid: a1ff26f70a7e3428384b7b797e6dc73b, type: 3}
+  snd2: {fileID: 8300000, guid: 2b08408ab4a6f4d3aac2946b6aacf34e, type: 3}
+  sndGol: {fileID: 8300000, guid: 177ee6be58d14453cafe1fa5d98918e8, type: 3}
+  sndPared: {fileID: 8300000, guid: cac79444fe7a84a2985c01630649f56b, type: 3}
 --- !u!82 &227813025
 AudioSource:
   m_ObjectHideFlags: 0
@@ -474,7 +478,7 @@ GameObject:
   - component: {fileID: 228484487}
   m_Layer: 0
   m_Name: JugadorDer
-  m_TagString: Untagged
+  m_TagString: jugDer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -506,6 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f2851d60c934b7cb811b37319522ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teclaArriba: 273
+  teclaAbajo: 274
 --- !u!61 &228484488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -691,7 +697,7 @@ GameObject:
   - component: {fileID: 256307465}
   m_Layer: 0
   m_Name: JugadorIzq
-  m_TagString: Untagged
+  m_TagString: jugIzq
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -723,6 +729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f2851d60c934b7cb811b37319522ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teclaArriba: 119
+  teclaAbajo: 115
 --- !u!61 &256307466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -940,7 +948,7 @@ GameObject:
   - component: {fileID: 691104477}
   m_Layer: 0
   m_Name: porteriaDer
-  m_TagString: Untagged
+  m_TagString: gol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1071,7 +1079,7 @@ GameObject:
   - component: {fileID: 732250112}
   m_Layer: 0
   m_Name: paredAbajo
-  m_TagString: Untagged
+  m_TagString: pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1282,7 +1290,7 @@ GameObject:
   - component: {fileID: 1059565289}
   m_Layer: 0
   m_Name: paredArriba
-  m_TagString: Untagged
+  m_TagString: pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1523,6 +1531,156 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159855541}
   m_CullTransparentMesh: 1
+--- !u!1 &1172233886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1172233889}
+  - component: {fileID: 1172233888}
+  - component: {fileID: 1172233887}
+  m_Layer: 0
+  m_Name: Juego
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1172233887
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172233886}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1172233888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172233886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2e3c72a606c2444b6d9ee4aa0a4cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 0}
+  sndSilbato: {fileID: 8300000, guid: 3e69262553ffe43438d73ddb8678e808, type: 3}
+  sndGameOver: {fileID: 8300000, guid: 9ff583580ce18411c87855d66f881118, type: 3}
+  txtGameOver: {fileID: 1159855543}
+  txtMarcador: {fileID: 1764594521}
+  signoX: 0
+  signoY: 0
+  velocidad: 1
+  MaxPunt: 5
+--- !u!4 &1172233889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172233886}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1764594521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,10 +1748,10 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0-0
+  m_Text: 0 - 0
 --- !u!222 &1764594524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1810,7 +1968,7 @@ GameObject:
   - component: {fileID: 2124275255}
   m_Layer: 0
   m_Name: porteriaIzq
-  m_TagString: Untagged
+  m_TagString: gol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1935,3 +2093,4 @@ SceneRoots:
   - {fileID: 2102916565}
   - {fileID: 52107901}
   - {fileID: 1002826368}
+  - {fileID: 1172233889}
