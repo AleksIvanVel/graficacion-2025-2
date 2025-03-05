@@ -283,10 +283,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c58f9f7ef67141d5b91249fc548c157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snd1: {fileID: 8300000, guid: a1ff26f70a7e3428384b7b797e6dc73b, type: 3}
-  snd2: {fileID: 8300000, guid: 2b08408ab4a6f4d3aac2946b6aacf34e, type: 3}
-  sndGol: {fileID: 8300000, guid: 177ee6be58d14453cafe1fa5d98918e8, type: 3}
-  sndPared: {fileID: 8300000, guid: cac79444fe7a84a2985c01630649f56b, type: 3}
+  snd1: {fileID: 8300000, guid: 5a599b76d9d67334586459b191df12e1, type: 3}
+  snd2: {fileID: 8300000, guid: bc41cfdce047db3408d1ade00f0ea9eb, type: 3}
+  sndGol: {fileID: 8300000, guid: ae90182d9b4fc7647bc81a978e9e675a, type: 3}
+  sndPared: {fileID: 8300000, guid: 5191387b43ea54f47bfd32bb2ac79494, type: 3}
 --- !u!82 &227813025
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1173,7 +1173,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1218,7 +1218,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1398,7 +1398,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1443,7 +1443,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1718,7 +1718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio: {fileID: 0}
   sndSilbato: {fileID: 8300000, guid: 3e69262553ffe43438d73ddb8678e808, type: 3}
-  sndGameOver: {fileID: 8300000, guid: 9ff583580ce18411c87855d66f881118, type: 3}
+  sndGameOver: {fileID: 0}
   txtGameOver: {fileID: 1159855543}
   txtMarcador: {fileID: 1764594521}
 --- !u!4 &1172233889
@@ -1955,12 +1955,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 10
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1975,8 +1975,8 @@ Canvas:
   m_GameObject: {fileID: 2102916561}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1936056351}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
