@@ -9,7 +9,6 @@ public class Configuracion : MonoBehaviour
     public Text op1, op2;
     public static int tipoJuego = 1; // 1. compu, 2. persona
 
-
     // Start is called before the first frame update
     void Awake() {
         tipoJuego = 1;
@@ -31,8 +30,16 @@ public class Configuracion : MonoBehaviour
             tipoJuego = 2;
         }
         if(Input.GetKey(KeyCode.Space)){
-            SceneManager.LoadScene("Main");
-            
+
+            if(tipoJuego == 1){
+                SceneManager.LoadScene("IAconfig");
+            }
+            else{
+                SceneManager.LoadScene("Main");
+            }  
+        }
+        if(Input.GetKey(KeyCode.Escape)){
+             SceneManager.LoadScene("Inicio");
         }
 
     }

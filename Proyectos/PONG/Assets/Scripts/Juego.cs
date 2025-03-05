@@ -15,8 +15,8 @@ public class Juego : MonoBehaviour
     private int MaxPunt = 5; // Puntaje Maximo para terminar el juego
 
 
-    public static float velBola = 5.0f, velJugador = 6.5f; // Valores para las velocidades de los objetos del juego
-    public int signoX, signoY, velocidad = 1;
+    public static float velBola = 5.0f, velJugador = 13.5f; // Valores para las velocidades de los objetos del juego
+    private int signoX, signoY, velocidad = 3;
 
     void Start()
     {
