@@ -33,13 +33,13 @@ public class IA : MonoBehaviour
         //asigan el nivel de dificultad
         switch (IAconfig.dificultadJuego){
             case 1:
-                velocidadComputadora = 5000.00f;
+                velocidadComputadora = 6500.00f;
             break;
             case 2:
-                velocidadComputadora = 3000.00f;
+                velocidadComputadora = 2000.00f;
             break;
             case 3:
-                velocidadComputadora = 2000.00f;
+                velocidadComputadora = 200.00f;
             break;
         }
     }
