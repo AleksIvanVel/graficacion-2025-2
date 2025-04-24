@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 1699976730}
   - component: {fileID: 1699976733}
   - component: {fileID: 1699976732}
-  - component: {fileID: 1699976731}
+  - component: {fileID: 1699976734}
   m_Layer: 0
   m_Name: presiona
   m_TagString: Untagged
@@ -1025,27 +1025,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -573.21}
   m_SizeDelta: {x: 1293.41, y: 386.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1699976731
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699976729}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6b31e3a12d4e4864a872b1948d6bacdf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1699976732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,6 +1067,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699976729}
   m_CullTransparentMesh: 1
+--- !u!114 &1699976734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699976729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffd9447a8809b0489bf57f829de0ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetoParpadea: {fileID: 1699976729}
+  tiempoRepetir: 1
 --- !u!1 &1722288380
 GameObject:
   m_ObjectHideFlags: 0
